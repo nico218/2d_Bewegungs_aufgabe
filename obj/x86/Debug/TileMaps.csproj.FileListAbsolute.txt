@@ -1,0 +1,14 @@
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Map.txt
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Player.png
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Tiles.jpg
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\TileMaps.exe
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\TileMaps.pdb
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Lidgren.Network.dll
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\MonoGame.Framework.dll
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\OpenTK.dll
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Tao.Sdl.dll
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\obj\x86\Debug\TileMaps.csprojResolveAssemblyReference.cache
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\obj\x86\Debug\TileMaps.exe
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\obj\x86\Debug\TileMaps.pdb
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Map.bmp
+D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Map_2.bmp
