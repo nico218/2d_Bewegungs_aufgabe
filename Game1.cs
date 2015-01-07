@@ -96,8 +96,15 @@ namespace TileMaps
             if (mouseState.LeftButton == ButtonState.Pressed)
             {
                 Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
-                Vector2 direction = target - this.player.Position;
-                this.MovePlayer(direction);
+                Vector2 direction = checkDistance(target, player);
+                if ((int)target.X == player.Position.X + 1 || (int)target.X == player.Position.X - 1 || (int)target.Y == player.Position.Y + 1 || (int)target.Y == player.Position.Y - 1)
+                {
+                    this.MovePlayer(direction);
+                }
+                else
+                {
+                    Console.WriteLine("not possible");
+                }
             }
         }
 
@@ -111,6 +118,12 @@ namespace TileMaps
                     this.player.Move(moveDirection);
                 }
             }
+        }
+        private Vector2 checkDistance(Vector2 target, Player player)
+        {
+            Vector2 distance = target - this.player.Position;
+
+            return distance;
         }
 
         private Vector2 ConvertScreenToWorldPoint(int x, int y)

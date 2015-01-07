@@ -12,3 +12,17 @@ D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\obj\x86\Debug\TileMaps.exe
 D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\obj\x86\Debug\TileMaps.pdb
 D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Map.bmp
 D:\SAE\Projects\GP914\GameMechanics\TileMaps\TileMaps\bin\WindowsGL\Debug\Content\Map_2.bmp
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\obj\x86\Debug\TileMaps.exe
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\obj\x86\Debug\TileMaps.pdb
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Content\Map.bmp
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Content\Map.txt
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Content\Player.png
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Content\Tiles.jpg
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Content\Map_2.bmp
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\TileMaps.exe
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\TileMaps.pdb
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\engel_000\Documents\GitHub\2d_Bewegungs_aufgabe\obj\x86\Debug\TileMaps.csprojResolveAssemblyReference.cache
