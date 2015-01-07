@@ -93,11 +93,11 @@ namespace TileMaps
 
             // Mouse
             MouseState mouseState = Mouse.GetState();
-            if (mouseState.LeftButton == ButtonState.Pressed)
+            if (mouseState.RightButton == ButtonState.Pressed)
             {
                 Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
-                Vector2 direction = checkDistance(target, player);
-                if ((int)target.X == player.Position.X + 1 || (int)target.X == player.Position.X - 1 || (int)target.Y == player.Position.Y + 1 || (int)target.Y == player.Position.Y - 1)
+                Vector2 direction = checkDistance(target, this.player);
+                if ((int)target.X == player.Position.X + 1 && (int)target.Y == player.Position.Y || (int)target.X == player.Position.X - 1 && (int)target.Y == player.Position.Y || (int)target.Y == player.Position.Y + 1 && (int)target.X == player.Position.X || (int)target.Y == player.Position.Y - 1 && (int)target.X == player.Position.X)
                 {
                     this.MovePlayer(direction);
                 }
