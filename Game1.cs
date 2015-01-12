@@ -19,6 +19,8 @@ namespace TileMaps
         Map map = new Map();
         Player player;
 
+        float delay = 0;
+
         public Game1() : base()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -47,8 +49,9 @@ namespace TileMaps
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            this.ProcessInput();
+            this.ProcessInput(gameTime);
             base.Update(gameTime);
+            Console.WriteLine(delay);
         }
 
         protected override void Draw(GameTime gameTime)
@@ -63,13 +66,15 @@ namespace TileMaps
             base.Draw(gameTime);
         }
 
-        public void ProcessInput()
+        public void ProcessInput(GameTime gametime)
         {
+            delay = gametime.ElapsedGameTime.Milliseconds;
+
             // Keyboard
             KeyboardState keyboardState = Keyboard.GetState();
             Vector2 moveDirection = Vector2.Zero;
 
-            if(keyboardState.IsKeyDown(Keys.D))
+            if (keyboardState.IsKeyDown(Keys.D))
             {
                 moveDirection.X++;
             }
@@ -88,7 +93,7 @@ namespace TileMaps
 
             if (moveDirection != Vector2.Zero)
             {
-                //this.MovePlayer(moveDirection);
+                this.MovePlayer(moveDirection);
             }
 
             // Mouse
@@ -97,17 +102,25 @@ namespace TileMaps
             {
                 Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
                 Vector2 direction = checkDistance(target, this.player);
-                if ((int)target.X == player.Position.X + 1 && (int)target.Y == player.Position.Y || (int)target.X == player.Position.X - 1 && (int)target.Y == player.Position.Y || (int)target.Y == player.Position.Y + 1 && (int)target.X == player.Position.X || (int)target.Y == player.Position.Y - 1 && (int)target.X == player.Position.X)
+
+
+                if ((int)target.X == player.Position.X + (int)direction.X && (int)target.Y == player.Position.Y || (int)target.X == player.Position.X - (int)direction.X && (int)target.Y == player.Position.Y || (int)target.Y == player.Position.Y + (int)direction.Y && (int)target.X == player.Position.X || (int)target.Y == player.Position.Y - (int)direction.Y && (int)target.X == player.Position.X)
                 {
-                    this.MovePlayer(direction);
-                }
-                else
-                {
-                    Console.WriteLine("not possible");
+                    delay += gametime.ElapsedGameTime.Milliseconds;
+
+                    if (delay >= 23)
+                    {
+                        this.MovePlayer(direction);
+                        delay = 0;
+                    }
+                    else
+                    {
+                        Console.WriteLine("not possible");
+                        Console.WriteLine(delay);
+                    }
                 }
             }
         }
-
         private void MovePlayer(Vector2 moveDirection)
         {
             Tile nextTile = this.map.GetTile(this.player.Position + moveDirection);
