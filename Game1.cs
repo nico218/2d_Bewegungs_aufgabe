@@ -52,7 +52,7 @@ namespace TileMaps
                 Exit();
             this.ProcessInput(gameTime);
             base.Update(gameTime);
-            Console.WriteLine(delay);
+            delay++;
         }
 
         protected override void Draw(GameTime gameTime)
@@ -69,7 +69,6 @@ namespace TileMaps
 
         public void ProcessInput(GameTime gametime)
         {
-            delay = gametime.ElapsedGameTime.Milliseconds;
 
             // Keyboard
             KeyboardState keyboardState = Keyboard.GetState();
@@ -94,7 +93,11 @@ namespace TileMaps
 
             if (moveDirection != Vector2.Zero)
             {
-                this.MovePlayer(moveDirection);
+                if (delay >= 16)
+                {
+                    this.MovePlayer(moveDirection);
+                    delay = 0;
+                }
             }
 
             // Mouse
@@ -107,9 +110,8 @@ namespace TileMaps
 
                 if ((int)target.X == player.Position.X + (int)direction.X && (int)target.Y == player.Position.Y || (int)target.X == player.Position.X - (int)direction.X && (int)target.Y == player.Position.Y || (int)target.Y == player.Position.Y + (int)direction.Y && (int)target.X == player.Position.X || (int)target.Y == player.Position.Y - (int)direction.Y && (int)target.X == player.Position.X)
                 {
-                    delay += gametime.ElapsedGameTime.Milliseconds;
 
-                    if (delay >= 23)
+                    if (delay >= 16)
                     {
                         this.MovePlayer(direction);
                         delay = 0;
